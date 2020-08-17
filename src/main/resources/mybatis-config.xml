@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE configuration
+		PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="logImpl" value="STDOUT_LOGGING"/>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	<typeAliases>
+		<package name="com.indi.pojo"/>
+	</typeAliases>
+
+
+	<plugins>
+		<!--配置拦截器插件-->
+		<plugin interceptor="com.github.pagehelper.PageInterceptor">
+			<!--分页参数合理化，避免出现小于第一页，大于最后一页的情况-->
+			<property name="reasonable" value="true"/>
+		</plugin>
+	</plugins>
+
+	<mappers>
+	</mappers>
+
+
+</configuration>
