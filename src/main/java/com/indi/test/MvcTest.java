@@ -39,7 +39,6 @@ public class MvcTest {
 
     /**
      * 开启本测试，需要关闭spring-mvc.xml的拦截器配置，并开启EmployeeController的测试分页方法。
-     * 主干添加
      * @throws Exception
      */
     @Test
