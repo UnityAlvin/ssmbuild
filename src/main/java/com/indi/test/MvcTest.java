@@ -37,10 +37,14 @@ public class MvcTest {
         mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
     }
 
+    /**
+     * 开启本测试，需要关闭spring-mvc.xml的拦截器配置，并开启EmployeeController的测试分页方法。
+     * @throws Exception
+     */
     @Test
     public void testPage() throws Exception {
         //模拟请求拿到返回值
-        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/emps").param("pn", "5")).andReturn();
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/employee/emps").param("pn", "5")).andReturn();
 
         //请求成功之后，请求域中会有pageinfo，可以去除pageinfo进行验证
         MockHttpServletRequest request = result.getRequest();

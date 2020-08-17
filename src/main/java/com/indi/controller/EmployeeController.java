@@ -7,6 +7,7 @@ import com.indi.pojo.Msg;
 import com.indi.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
@@ -28,13 +29,13 @@ public class EmployeeController {
     EmployeeService employeeService;
 
 
-//    /**
-//     * 查询员工数据（分页查询）测试用
-//     *
-//     * @param pn    页数
-//     * @param model 分页信息以及数据
-//     * @return
-//     */
+    /**
+     * 查询员工数据（分页查询）测试用
+     *
+     * @param pn    页数
+     * @param model 分页信息以及数据
+     * @return
+     */
 //    @RequestMapping("/emps")
 //    public String getEmps(@RequestParam(value = "pn", defaultValue = "1") Integer pn, Model model) {
 //        //调用分页插件的分页方法，传入页码，以及每页显示的条数
@@ -46,7 +47,7 @@ public class EmployeeController {
 //        //只需要将pageInfo交给前端就行了,5表示连续显示5页
 //        PageInfo page = new PageInfo(emps, 5);
 //        model.addAttribute("pageInfo", page);
-//        return "list";
+//        return "list1";
 //    }
 
     /**
